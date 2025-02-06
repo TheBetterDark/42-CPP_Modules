@@ -6,7 +6,7 @@
 /*   By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/02 17:57:26 by muabdi            #+#    #+#             */
-/*   Updated: 2025/02/02 18:37:04 by muabdi           ###   ########.fr       */
+/*   Updated: 2025/02/06 09:47:35 by muabdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,7 @@
 
 static std::string prompt_menu(void);
 
-int main(void)
-{
+int main(void) {
 	while (true)
 	{
 		std::string prompt = prompt_menu();
@@ -26,8 +25,7 @@ int main(void)
 	return EXIT_SUCCESS;
 }
 
-static std::string prompt_menu(void)
-{
+static std::string prompt_menu(void) {
 	std::cout << std::endl;
 	std::cout << ">>----------------------------<<" << '\n';
 	std::cout << ">>    MY AMAZING PHONEBOOK    <<" << '\n';
