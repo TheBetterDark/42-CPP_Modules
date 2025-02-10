@@ -1,29 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Contact.hpp                                        :+:      :+:    :+:   */
+/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/06 09:18:25 by muabdi            #+#    #+#             */
-/*   Updated: 2025/02/10 17:44:12 by muabdi           ###   ########.fr       */
+/*   Created: 2025/02/10 17:05:52 by muabdi            #+#    #+#             */
+/*   Updated: 2025/02/10 17:39:10 by muabdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
 #include <iostream>
-#include <iomanip>
+#include "Contact.hpp"
 
-class  Contact
+class PhoneBook
 {
 	private:
-		std::string	first_name;
-		std::string	last_name;
-		std::string	nickname;
-		std::string	number;
+		Contact contacts[8];
+		int     contact_count;
 
 	public:
-		bool	update_contact(std::string new_value, int field_index);
-		void    display_contact(void);
+		PhoneBook();
+		void    update_contact(int index, std::string new_value, int field_index);
+		void    add_contact(Contact contact);
+		void    display_contact(int index);
+		void    remove_contact(int index);
+		int     get_contact_count(void);
+		void    display_contacts(void);
+		void    search_contact(void);
 };

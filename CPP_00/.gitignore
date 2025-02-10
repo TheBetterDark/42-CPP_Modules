@@ -11,6 +11,7 @@
 
 # Executables
 megaphone
+phonebook
 
 # Temp files
 *.swp
