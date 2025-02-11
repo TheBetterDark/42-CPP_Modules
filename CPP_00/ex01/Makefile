@@ -6,14 +6,14 @@
 #    By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/12 23:59:26 by muabdi            #+#    #+#              #
-#    Updated: 2025/02/02 18:35:34 by muabdi           ###   ########.fr        #
+#    Updated: 2025/02/10 18:12:11 by muabdi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = phonebook
 
-CC = c++
-CFLAGS = -Wall -Werror -Wextra -std=c++98
+CXX = c++
+CXXFLAGS = -Wall -Werror -Wextra -std=c++98
 
 RED = \033[0;31m
 GREEN = \033[0;32m
@@ -23,8 +23,8 @@ NC = \033[0m
 SRC_DIR = ./src
 OBJ_DIR = ./bin
 
-SRCS = main.cpp
-OBJS = $(SRCS:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
+SRCS = main.cpp PhoneBook.cpp Contact.cpp
+OBJS = $(SRCS:$(SRC_DIR)/%.cpp=$(OBJ_DIR)/%.o)
 
 all: $(NAME) $(OBJ_DIR)
 
@@ -35,11 +35,11 @@ $(OBJ_DIR):
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 	@mkdir -p $(@D)
-	@$(CC) $(CFLAGS) $(INCLUDEFLAGS) -c $< -o $@
+	@$(CXX) $(CXXFLAGS) $(INCLUDEFLAGS) -c $< -o $@
 
 ${NAME}: $(OBJS)
 	@echo "${YELLOW}Creating $(NAME)...${NC}"
-	@$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
+	@$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
 	@echo "${GREEN}$(NAME) created.${NC}"
 
 all: $(NAME) $(OBJ_DIR)

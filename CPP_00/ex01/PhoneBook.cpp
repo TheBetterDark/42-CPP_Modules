@@ -5,84 +5,80 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/10 17:15:20 by muabdi            #+#    #+#             */
-/*   Updated: 2025/02/10 17:47:30 by muabdi           ###   ########.fr       */
+/*   Created: 2025/02/10 18:10:24 by muabdi            #+#    #+#             */
+/*   Updated: 2025/02/10 18:29:32 by muabdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 
-PhoneBook::PhoneBook() : contact_count(0), contacts() {}
+PhoneBook::PhoneBook() : contacts(), contact_count(0) {}
 
-void    PhoneBook::add_contact(Contact contact)
+// TODO: Add validation for phone number (invalid characters or format)
+void PhoneBook::add_contact(void)
 {
-	if (this->contact_count < 8)
-	{
-		this->contacts[this->contact_count] = contact;
-		this->contact_count++;
-	}
-	else
-	{
-		for (int i = 0; i < 7; i++)
-			this->contacts[i] = this->contacts[i + 1];
-		this->contacts[7] = contact;
-	}
+    Contact contact;
+    std::string input;
+
+    std::cout << "Enter first name: ";
+    std::getline(std::cin, input);
+    contact.update_contact(input, 1);
+
+    std::cout << "Enter last name: ";
+    std::getline(std::cin, input);
+    contact.update_contact(input, 2);
+
+    std::cout << "Enter nickname: ";
+    std::getline(std::cin, input);
+    contact.update_contact(input, 3);
+
+    std::cout << "Enter number: ";
+    std::getline(std::cin, input); 
+    contact.update_contact(input, 4);
+
+    if (this->contact_count < 8)
+    {
+        this->contacts[this->contact_count] = contact;
+        this->contact_count++;
+    }
+    else
+    {
+        for (int i = 0; i < 7; i++)
+            this->contacts[i] = this->contacts[i + 1];
+        this->contacts[7] = contact;
+    }
 }
 
-void    PhoneBook::display_contact(int index)
+void PhoneBook::search_contact(void)
 {
-	if (index >= 0 && index < contact_count)
-		this->contacts[index].display_contact();
-	else
-		std::cout << "Invalid index" << std::endl;
+    std::string input;
+    int index;
+
+    this->display_contacts();
+    std::cout << "Enter index of contact: ";
+    std::getline(std::cin, input);
+
+    index = std::stoi(input);
+    this->display_contact(index);
 }
 
-void    PhoneBook::display_contacts(void)
+void PhoneBook::display_contact(int index)
 {
-	std::cout << std::setw(10) << "Index" << "|";
-	std::cout << std::setw(10) << "First Name" << "|";
-	std::cout << std::setw(10) << "Last Name" << "|";
-	std::cout << std::setw(10) << "Nickname" << std::endl;
-	for (int i = 0; i < this->contact_count; i++)
-	{
-		std::cout << std::setw(10) << i << "|";
-		this->contacts[i].display_contact();
-	}
+    if (index >= 0 && index < contact_count)
+        this->contacts[index].display_contact();
+    else
+        std::cout << "Invalid index" << std::endl;
 }
 
-void    PhoneBook::search_contact(void)
+void PhoneBook::display_contacts(void)
 {
-	std::string input;
-	int index;
-
-	this->display_contacts();
-	std::cout << "Enter index of contact: ";
-	std::getline(std::cin, input);
-	index = std::stoi(input);
-	this->display_contact(index);
-}
-
-void    PhoneBook::update_contact(int index, std::string new_value, int field_index)
-{
-	if (index >= 0 && index < contact_count)
-		this->contacts[index].update_contact(new_value, field_index);
-	else
-		std::cout << "Invalid index" << std::endl;
-}
-
-void    PhoneBook::remove_contact(int index)
-{
-	if (index >= 0 && index < this->contact_count)
-	{
-		for (int i = index; i < this->contact_count - 1; i++)
-			this->contacts[i] = this->contacts[i + 1];
-		this->contact_count--;
-	}
-	else
-		std::cout << "Invalid index" << std::endl;
-}
-
-int     PhoneBook::get_contact_count(void)
-{
-	return this->contact_count;
+    std::cout << std::setw(10) << "Index" << "|";
+    std::cout << std::setw(10) << "First Name" << "|";
+    std::cout << std::setw(10) << "Last Name" << "|";
+    std::cout << std::setw(10) << "Nickname" << std::endl;
+    for (int i = 0; i < this->contact_count; i++)
+    {
+        std::cout << std::setw(10) << i << "|";
+        this->contacts[i].display_contact();
+    }
 }

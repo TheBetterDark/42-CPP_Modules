@@ -6,36 +6,39 @@
 /*   By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/02 17:57:26 by muabdi            #+#    #+#             */
-/*   Updated: 2025/02/10 17:53:23 by muabdi           ###   ########.fr       */
+/*   Updated: 2025/02/11 16:02:41 by muabdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include <iostream>
+#include "PhoneBook.hpp"
 
 static std::string prompt_menu(void);
 
+// TODO: Fix Formating & Handle Invalid Input (invalid characters);
 int main(void) {
+	PhoneBook phoneBook;
+
 	while (true)
 	{
 		std::string prompt = prompt_menu();
 		switch (std::stoi(prompt))
         {
             case 1:
-                std::cout << "ADD CONTACT" << std::endl;
+				phoneBook.add_contact();
                 break;
             case 2:
-                std::cout << "SEARCH CONTACT" << std::endl;
+				phoneBook.search_contact();
                 break;
             case 3:
-                std::cout << "EXIT PHONEBOOK" << std::endl;
+                std::cout << "EXIT PHONEBOOK" << '\n';
+				std::cout << "GOODBYE" << std::endl;
                 return EXIT_SUCCESS;
             default:
                 std::cout << "INVALID CHOICE" << std::endl;
                 break;
         }
 	}
-
 	return EXIT_SUCCESS;
 }
 
@@ -52,7 +55,9 @@ static std::string prompt_menu(void) {
 	std::cout << ">>----------------------------<<" << '\n';
 	std::cout << std::endl;
 
+	std::cout << "CHOICE: ";
 	std::string choice;
-	std::cin >> choice;
+	std::getline(std::cin, choice);
+	std::cout << std::endl;
 	return choice;
 }
