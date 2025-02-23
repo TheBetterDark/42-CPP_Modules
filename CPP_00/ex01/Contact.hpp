@@ -6,11 +6,14 @@
 /*   By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/06 09:18:25 by muabdi            #+#    #+#             */
-/*   Updated: 2025/02/23 16:28:18 by muabdi           ###   ########.fr       */
+/*   Updated: 2025/02/23 19:43:33 by muabdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
+
+#ifndef CONTACT_H
+#define CONTACT_H
 
 #include <iostream>
 #include <iomanip>
@@ -30,3 +33,5 @@ class  Contact
 		void	display_full_contact(void);
 		void    display_contact(void);
 };
+
+#endif //CONTACT_H
