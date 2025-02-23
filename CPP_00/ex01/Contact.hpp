@@ -6,7 +6,7 @@
 /*   By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/06 09:18:25 by muabdi            #+#    #+#             */
-/*   Updated: 2025/02/10 18:16:13 by muabdi           ###   ########.fr       */
+/*   Updated: 2025/02/23 16:28:18 by muabdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,11 @@ class  Contact
 		std::string	last_name;
 		std::string	nickname;
 		std::string	number;
+		std::string	secret;
 
 	public:
 		Contact();
-		bool	update_contact(std::string new_value, int field_index);
+		bool	update_contact(int field_index);
+		void	display_full_contact(void);
 		void    display_contact(void);
 };

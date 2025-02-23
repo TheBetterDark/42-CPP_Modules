@@ -6,7 +6,7 @@
 /*   By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/10 18:10:24 by muabdi            #+#    #+#             */
-/*   Updated: 2025/02/10 18:29:32 by muabdi           ###   ########.fr       */
+/*   Updated: 2025/02/23 16:46:51 by muabdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,23 +18,12 @@ PhoneBook::PhoneBook() : contacts(), contact_count(0) {}
 void PhoneBook::add_contact(void)
 {
     Contact contact;
-    std::string input;
 
-    std::cout << "Enter first name: ";
-    std::getline(std::cin, input);
-    contact.update_contact(input, 1);
-
-    std::cout << "Enter last name: ";
-    std::getline(std::cin, input);
-    contact.update_contact(input, 2);
-
-    std::cout << "Enter nickname: ";
-    std::getline(std::cin, input);
-    contact.update_contact(input, 3);
-
-    std::cout << "Enter number: ";
-    std::getline(std::cin, input); 
-    contact.update_contact(input, 4);
+    contact.update_contact(1);
+    contact.update_contact(2);
+    contact.update_contact(3);
+    contact.update_contact(4);
+    contact.update_contact(5);
 
     if (this->contact_count < 8)
     {
@@ -65,7 +54,7 @@ void PhoneBook::search_contact(void)
 void PhoneBook::display_contact(int index)
 {
     if (index >= 0 && index < contact_count)
-        this->contacts[index].display_contact();
+        this->contacts[index].display_full_contact();
     else
         std::cout << "Invalid index" << std::endl;
 }
@@ -81,4 +70,5 @@ void PhoneBook::display_contacts(void)
         std::cout << std::setw(10) << i << "|";
         this->contacts[i].display_contact();
     }
+    std::cout << std::endl;
 }

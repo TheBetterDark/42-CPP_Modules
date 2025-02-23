@@ -6,26 +6,37 @@
 /*   By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/02 17:57:26 by muabdi            #+#    #+#             */
-/*   Updated: 2025/02/11 16:02:41 by muabdi           ###   ########.fr       */
+/*   Updated: 2025/02/23 16:45:20 by muabdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include <unistd.h>
 #include "PhoneBook.hpp"
 
 static std::string prompt_menu(void);
 
-// TODO: Fix Formating & Handle Invalid Input (invalid characters);
 int main(void) {
 	PhoneBook phoneBook;
 
 	while (true)
 	{
-		std::string prompt = prompt_menu();
-		switch (std::stoi(prompt))
+		std::string input = prompt_menu();
+
+		if (input.empty())
+			continue;
+
+		if (std::any_of(input.begin(), input.end(), ::isdigit) == false)
+		{
+			std::cout << "INVALID INPUT" << std::endl;
+			continue;
+		}
+
+		switch (std::stoi(input))
         {
             case 1:
 				phoneBook.add_contact();
+				printf("CONTACT ADDED\n");
                 break;
             case 2:
 				phoneBook.search_contact();
