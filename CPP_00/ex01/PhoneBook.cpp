@@ -6,7 +6,7 @@
 /*   By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/10 18:10:24 by muabdi            #+#    #+#             */
-/*   Updated: 2025/02/23 16:46:51 by muabdi           ###   ########.fr       */
+/*   Updated: 2025/02/23 19:56:00 by muabdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 PhoneBook::PhoneBook() : contacts(), contact_count(0) {}
 
-// TODO: Add validation for phone number (invalid characters or format)
 void PhoneBook::add_contact(void)
 {
     Contact contact;

@@ -6,7 +6,7 @@
 /*   By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/02 17:57:26 by muabdi            #+#    #+#             */
-/*   Updated: 2025/02/23 16:45:20 by muabdi           ###   ########.fr       */
+/*   Updated: 2025/02/23 19:56:12 by muabdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@
 
 static std::string prompt_menu(void);
 
-int main(void) {
+int main(void)
+{
 	PhoneBook phoneBook;
 
 	while (true)
@@ -33,27 +34,28 @@ int main(void) {
 		}
 
 		switch (std::stoi(input))
-        {
-            case 1:
-				phoneBook.add_contact();
-				printf("CONTACT ADDED\n");
-                break;
-            case 2:
-				phoneBook.search_contact();
-                break;
-            case 3:
-                std::cout << "EXIT PHONEBOOK" << '\n';
-				std::cout << "GOODBYE" << std::endl;
-                return EXIT_SUCCESS;
-            default:
-                std::cout << "INVALID CHOICE" << std::endl;
-                break;
-        }
+		{
+		case 1:
+			phoneBook.add_contact();
+			printf("CONTACT ADDED\n");
+			break;
+		case 2:
+			phoneBook.search_contact();
+			break;
+		case 3:
+			std::cout << "EXIT PHONEBOOK" << '\n';
+			std::cout << "GOODBYE" << std::endl;
+			return EXIT_SUCCESS;
+		default:
+			std::cout << "INVALID CHOICE" << std::endl;
+			break;
+		}
 	}
 	return EXIT_SUCCESS;
 }
 
-static std::string prompt_menu(void) {
+static std::string prompt_menu(void)
+{
 	std::cout << std::endl;
 	std::cout << ">>----------------------------<<" << '\n';
 	std::cout << ">>    MY AMAZING PHONEBOOK    <<" << '\n';
