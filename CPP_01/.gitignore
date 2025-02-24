@@ -15,7 +15,8 @@ zombieHorde
 brain
 violence
 sed
-Harl
+harl
+harlFilter
 
 # Temp files
 *.swp

@@ -6,11 +6,11 @@
 #    By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/12 23:59:26 by muabdi            #+#    #+#              #
-#    Updated: 2025/02/24 15:11:10 by muabdi           ###   ########.fr        #
+#    Updated: 2025/02/24 15:16:56 by muabdi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = harl
+NAME = harlFilter
 
 CXX = c++
 CXXFLAGS = -Wall -Werror -Wextra -std=c++98
