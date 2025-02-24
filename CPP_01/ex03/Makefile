@@ -6,11 +6,11 @@
 #    By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/12 23:59:26 by muabdi            #+#    #+#              #
-#    Updated: 2025/02/24 12:37:20 by muabdi           ###   ########.fr        #
+#    Updated: 2025/02/24 13:21:14 by muabdi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = brain
+NAME = violence
 
 CXX = c++
 CXXFLAGS = -Wall -Werror -Wextra -std=c++98
