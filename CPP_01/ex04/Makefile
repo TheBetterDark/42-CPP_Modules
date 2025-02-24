@@ -6,7 +6,7 @@
 #    By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/12 23:59:26 by muabdi            #+#    #+#              #
-#    Updated: 2025/02/24 14:31:52 by muabdi           ###   ########.fr        #
+#    Updated: 2025/02/24 15:27:47 by muabdi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,7 @@ NC = \033[0m
 SRC_DIR = ./src
 OBJ_DIR = ./bin
 
-SRCS = src/main.cpp
+SRCS = $(SRC_DIR)/main.cpp
 OBJS = $(SRCS:$(SRC_DIR)/%.cPP=$(OBJ_DIR)/%.o)
 
 all: $(NAME) $(OBJ_DIR)
