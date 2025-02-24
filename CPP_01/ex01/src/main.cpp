@@ -5,21 +5,26 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/23 19:51:26 by muabdi            #+#    #+#             */
-/*   Updated: 2025/02/23 20:10:02 by muabdi           ###   ########.fr       */
+/*   Created: 2025/02/23 20:12:04 by muabdi            #+#    #+#             */
+/*   Updated: 2025/02/24 12:04:31 by muabdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "../include/Zombie.hpp"
 #include <iostream>
 
 int main()
 {
-	Zombie* zombie = newZombie("Mike");
-	zombie->announce();
-	delete zombie;
+    std::cout << "Creating a zombie horde..." << std::endl;
 
-	randomChump("Bob");
+    Zombie *horde = zombieHorde(5, "Zombie");
 
-	return EXIT_SUCCESS;
+    for (int i = 0; i < 5; i++)
+        horde[i].announce();
+
+    delete[] horde;
+
+    std::cout << "Zombie horde destroyed." << std::endl;
+
+    return EXIT_SUCCESS;
 }
