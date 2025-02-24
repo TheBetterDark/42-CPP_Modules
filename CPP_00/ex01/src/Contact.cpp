@@ -6,11 +6,11 @@
 /*   By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/10 17:03:39 by muabdi            #+#    #+#             */
-/*   Updated: 2025/02/23 19:57:06 by muabdi           ###   ########.fr       */
+/*   Updated: 2025/02/24 15:32:19 by muabdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Contact.hpp"
+#include "../include/Contact.hpp"
 
 Contact::Contact() : first_name(""), last_name(""), nickname(""), number(""), secret("") {}
 

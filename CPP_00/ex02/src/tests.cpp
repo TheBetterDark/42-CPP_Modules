@@ -10,7 +10,7 @@
 #include <vector>
 #include <algorithm>
 #include <functional>
-#include "Account.hpp"
+#include "../include/Account.hpp" //! Changed to relative path
 
 
 int		main( void ) {

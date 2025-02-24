@@ -6,7 +6,7 @@
 #    By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/12 23:59:26 by muabdi            #+#    #+#              #
-#    Updated: 2025/02/10 18:12:11 by muabdi           ###   ########.fr        #
+#    Updated: 2025/02/24 15:38:23 by muabdi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,7 @@ NC = \033[0m
 SRC_DIR = ./src
 OBJ_DIR = ./bin
 
-SRCS = main.cpp PhoneBook.cpp Contact.cpp
+SRCS = $(SRC_DIR)/main.cpp $(SRC_DIR)/PhoneBook.cpp $(SRC_DIR)/Contact.cpp
 OBJS = $(SRCS:$(SRC_DIR)/%.cpp=$(OBJ_DIR)/%.o)
 
 all: $(NAME) $(OBJ_DIR)
