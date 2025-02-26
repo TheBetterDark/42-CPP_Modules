@@ -6,7 +6,7 @@
 /*   By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/02 17:13:12 by muabdi            #+#    #+#             */
-/*   Updated: 2025/02/23 19:57:46 by muabdi           ###   ########.fr       */
+/*   Updated: 2025/02/26 16:16:30 by muabdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
 		for (int j = 0; argv[i][j] != '\0'; j++)
 			argv[i][j] = toupper(argv[i][j]);
 
-		if (argv[i] != NULL)
+		if (argv[i] != NULL && i != 1)
 			std::cout << " ";
 
 		std::cout << argv[i];

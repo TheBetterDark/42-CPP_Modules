@@ -6,13 +6,14 @@
 /*   By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/02 17:57:26 by muabdi            #+#    #+#             */
-/*   Updated: 2025/02/24 15:32:46 by muabdi           ###   ########.fr       */
+/*   Updated: 2025/02/26 16:23:45 by muabdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/PhoneBook.hpp"
 #include <stdlib.h>
 #include <unistd.h>
+#include <sstream>
 
 static std::string prompt_menu(void);
 
@@ -27,17 +28,15 @@ int main(void)
 		if (input.empty())
 			continue;
 
-		if (std::any_of(input.begin(), input.end(), ::isdigit) == false)
-		{
-			std::cout << "INVALID INPUT" << std::endl;
-			continue;
-		}
+		std::stringstream ss(input);
+        int choice;
+        ss >> choice;
 
-		switch (std::stoi(input))
+		switch (choice)
 		{
 		case 1:
 			phoneBook.add_contact();
-			printf("CONTACT ADDED\n");
+			std::cout << "CONTACT ADDED" << std::endl;
 			break;
 		case 2:
 			phoneBook.search_contact();
