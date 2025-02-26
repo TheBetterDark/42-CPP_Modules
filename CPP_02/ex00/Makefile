@@ -6,7 +6,7 @@
 #    By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/12 23:59:26 by muabdi            #+#    #+#              #
-#    Updated: 2025/02/24 15:54:59 by muabdi           ###   ########.fr        #
+#    Updated: 2025/02/26 16:26:53 by muabdi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +33,7 @@ $(OBJ_DIR):
 	@mkdir -p $(OBJ_DIR)
 	@echo "${GREEN}Object directory $(OBJ_DIR) created.${NC}"
 
-$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
+$(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp
 	@mkdir -p $(@D)
 	@$(CXX) $(CXXFLAGS) $(INCLUDEFLAGS) -c $< -o $@
 
