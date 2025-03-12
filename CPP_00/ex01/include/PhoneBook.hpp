@@ -6,7 +6,7 @@
 /*   By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/10 17:05:52 by muabdi            #+#    #+#             */
-/*   Updated: 2025/02/23 19:56:51 by muabdi           ###   ########.fr       */
+/*   Updated: 2025/03/12 20:53:53 by muabdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #define PHONEBOOK_HPP
 
 #include <iostream>
+#include <sstream>
 #include "Contact.hpp"
 
 class PhoneBook
