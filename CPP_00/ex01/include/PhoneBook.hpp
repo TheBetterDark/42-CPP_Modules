@@ -6,7 +6,7 @@
 /*   By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/10 17:05:52 by muabdi            #+#    #+#             */
-/*   Updated: 2025/03/12 20:53:53 by muabdi           ###   ########.fr       */
+/*   Updated: 2025/03/14 16:00:54 by muabdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,11 @@
 class PhoneBook
 {
 private:
-	Contact contacts[8];
-	int contact_count;
+	Contact _contacts[8];
+	int _contact_count;
 
-	void display_contacts(void);
-	void display_contact(int index);
+	void _display_contacts(void);
+	void _display_contact(int index);
 
 public:
 	PhoneBook();

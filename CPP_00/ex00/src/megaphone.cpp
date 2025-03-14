@@ -6,11 +6,11 @@
 /*   By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/02 17:13:12 by muabdi            #+#    #+#             */
-/*   Updated: 2025/02/26 16:16:30 by muabdi           ###   ########.fr       */
+/*   Updated: 2025/03/14 15:59:47 by muabdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include <cstdlib>
 #include <iostream>
 
 int main(int argc, char *argv[])

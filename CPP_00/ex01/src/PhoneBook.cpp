@@ -6,7 +6,7 @@
 /*   By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/10 18:10:24 by muabdi            #+#    #+#             */
-/*   Updated: 2025/03/12 21:00:29 by muabdi           ###   ########.fr       */
+/*   Updated: 2025/03/14 16:05:47 by muabdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static bool contains_only_digits(const std::string &str)
 	return true;
 }
 
-PhoneBook::PhoneBook() : contacts(), contact_count(0) {}
+PhoneBook::PhoneBook() : _contacts(), _contact_count(0) {}
 
 void PhoneBook::add_contact(void)
 {
@@ -34,31 +34,31 @@ void PhoneBook::add_contact(void)
 	contact.update_contact(4);
 	contact.update_contact(5);
 
-	if (this->contact_count < 8)
+	if (this->_contact_count < 8)
 	{
-		this->contacts[this->contact_count] = contact;
-		this->contact_count++;
+		this->_contacts[this->_contact_count] = contact;
+		this->_contact_count++;
 	}
 	else
 	{
 		for (int i = 0; i < 7; i++)
-			this->contacts[i] = this->contacts[i + 1];
-		this->contacts[7] = contact;
+			this->_contacts[i] = this->_contacts[i + 1];
+		this->_contacts[7] = contact;
 	}
 }
 
 void PhoneBook::search_contact(void)
 {
-	if (this->contact_count == 0)
+	if (this->_contact_count == 0)
 	{
-		std::cout << "There are no contacts to search." << std::endl;
+		std::cout << "There are no _contacts to search." << std::endl;
 		return;
 	}
 
 	std::string input;
 	int index;
 
-	this->display_contacts();
+	this->_display_contacts();
 	while (true)
 	{
 		std::cout << "Enter index of contact: ";
@@ -67,32 +67,34 @@ void PhoneBook::search_contact(void)
 			std::cout << "Invalid index. Please try again." << std::endl;
 
 		std::stringstream ss(input);
-		if (ss >> index && index >= 0 && index < this->contact_count)
+		if (ss >> index && index >= 0 && index < this->_contact_count)
 		{
-			this->display_contact(index);
+			this->_display_contact(index);
 			break;
 		}
+		else
+			std::cout << "Invalid index. Please try again." << std::endl;
 	}
 }
 
-void PhoneBook::display_contact(int index)
+void PhoneBook::_display_contact(int index)
 {
-	if (index >= 0 && index < contact_count)
-		this->contacts[index].display_full_contact();
+	if (index >= 0 && index < _contact_count)
+		this->_contacts[index].display_full_contact();
 	else
 		std::cout << "Invalid index" << std::endl;
 }
 
-void PhoneBook::display_contacts(void)
+void PhoneBook::_display_contacts(void)
 {
 	std::cout << std::setw(10) << "Index" << "|";
 	std::cout << std::setw(10) << "First Name" << "|";
 	std::cout << std::setw(10) << "Last Name" << "|";
 	std::cout << std::setw(10) << "Nickname" << std::endl;
-	for (int i = 0; i < this->contact_count; i++)
+	for (int i = 0; i < this->_contact_count; i++)
 	{
 		std::cout << std::setw(10) << i << "|";
-		this->contacts[i].display_contact();
+		this->_contacts[i].display_contact();
 	}
 	std::cout << std::endl;
 }

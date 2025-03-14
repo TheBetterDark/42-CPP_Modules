@@ -6,7 +6,7 @@
 /*   By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/10 17:03:39 by muabdi            #+#    #+#             */
-/*   Updated: 2025/03/12 21:00:40 by muabdi           ###   ########.fr       */
+/*   Updated: 2025/03/14 16:09:57 by muabdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,22 +22,23 @@ static bool contains_only_digits(const std::string &str)
 	return true;
 }
 
-Contact::Contact() : first_name(""), last_name(""), nickname(""), number(""), secret("") {}
+Contact::Contact() : _first_name(""), _last_name(""), _nickname(""), _number(""), _secret("") {}
 
+// TODO: Truncate the string if it's too long (no more than 9 characters)
 void Contact::display_contact(void)
 {
-	std::cout << std::setw(10) << this->first_name << "|";
-	std::cout << std::setw(10) << this->last_name << "|";
-	std::cout << std::setw(10) << this->nickname << "\n";
+	std::cout << std::setw(10) << this->_first_name.substr(0, 9) << "|";
+	std::cout << std::setw(10) << this->_last_name.substr(0, 9) << "|";
+	std::cout << std::setw(10) << this->_nickname.substr(0, 9) << "\n";
 }
 
 void Contact::display_full_contact(void)
 {
-	std::cout << std::setw(10) << this->first_name << "|";
-	std::cout << std::setw(10) << this->last_name << "|";
-	std::cout << std::setw(10) << this->nickname << "|";
-	std::cout << std::setw(10) << this->number << "|";
-	std::cout << std::setw(10) << this->secret << std::endl;
+	std::cout << "\nfirst name: " << this->_first_name << "\n";
+	std::cout << "last name: " << this->_last_name << "\n";
+	std::cout << "nickname: "<< this->_nickname << "\n";
+	std::cout << "number: " << this->_number << "\n";
+	std::cout << "secret: " << this->_secret << std::endl;
 }
 
 bool Contact::update_contact(int field_index)
@@ -49,23 +50,23 @@ bool Contact::update_contact(int field_index)
 	switch (field_index)
 	{
 	case 1:
-		field = &this->first_name;
+		field = &this->_first_name;
 		field_name = "first name";
 		break;
 	case 2:
-		field = &this->last_name;
+		field = &this->_last_name;
 		field_name = "last name";
 		break;
 	case 3:
-		field = &this->nickname;
+		field = &this->_nickname;
 		field_name = "nickname";
 		break;
 	case 4:
-		field = &this->number;
+		field = &this->_number;
 		field_name = "number";
 		break;
 	case 5:
-		field = &this->secret;
+		field = &this->_secret;
 		field_name = "secret";
 		break;
 	default:
@@ -79,7 +80,7 @@ bool Contact::update_contact(int field_index)
 		if (input.empty())
 			std::cout << "Error: " << field_name << " cannot be empty." << std::endl;
 		else if (field_index == 4 && !contains_only_digits(input))
-			std::cout << "Error: invalid number." << std::endl;
+			std::cout << "Error: invalid _number." << std::endl;
 		else
 			*field = input;
 	}

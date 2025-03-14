@@ -6,7 +6,7 @@
 /*   By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/06 09:18:25 by muabdi            #+#    #+#             */
-/*   Updated: 2025/03/12 20:55:21 by muabdi           ###   ########.fr       */
+/*   Updated: 2025/03/14 16:01:00 by muabdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,11 @@
 class Contact
 {
 private:
-	std::string first_name;
-	std::string last_name;
-	std::string nickname;
-	std::string number;
-	std::string secret;
+	std::string _first_name;
+	std::string _last_name;
+	std::string _nickname;
+	std::string _number;
+	std::string _secret;
 
 public:
 	Contact();
