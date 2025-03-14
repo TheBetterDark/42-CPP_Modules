@@ -6,7 +6,7 @@
 /*   By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/10 17:03:39 by muabdi            #+#    #+#             */
-/*   Updated: 2025/03/14 16:09:57 by muabdi           ###   ########.fr       */
+/*   Updated: 2025/03/14 16:11:15 by muabdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ static bool contains_only_digits(const std::string &str)
 
 Contact::Contact() : _first_name(""), _last_name(""), _nickname(""), _number(""), _secret("") {}
 
-// TODO: Truncate the string if it's too long (no more than 9 characters)
 void Contact::display_contact(void)
 {
 	std::cout << std::setw(10) << this->_first_name.substr(0, 9) << "|";
