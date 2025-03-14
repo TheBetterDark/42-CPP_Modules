@@ -6,11 +6,12 @@
 /*   By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 12:06:03 by muabdi            #+#    #+#             */
-/*   Updated: 2025/02/24 12:08:13 by muabdi           ###   ########.fr       */
+/*   Updated: 2025/03/14 15:11:41 by muabdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
+#include <cstdlib>
 
 int main()
 {

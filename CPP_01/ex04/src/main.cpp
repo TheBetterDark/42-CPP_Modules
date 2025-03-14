@@ -6,13 +6,14 @@
 /*   By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 13:34:40 by muabdi            #+#    #+#             */
-/*   Updated: 2025/02/24 14:25:18 by muabdi           ###   ########.fr       */
+/*   Updated: 2025/03/14 15:52:35 by muabdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <cstdlib>
 
 void print_usage(const char *programName)
 {

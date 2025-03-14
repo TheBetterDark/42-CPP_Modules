@@ -6,7 +6,7 @@
 /*   By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 12:12:05 by muabdi            #+#    #+#             */
-/*   Updated: 2025/02/24 12:31:58 by muabdi           ###   ########.fr       */
+/*   Updated: 2025/03/14 15:12:52 by muabdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 class Weapon
 {
 private:
-    std::string type;
+    std::string _type;
 
 public:
     Weapon(std::string type);

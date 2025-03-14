@@ -6,7 +6,7 @@
 /*   By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 14:48:30 by muabdi            #+#    #+#             */
-/*   Updated: 2025/02/24 14:51:15 by muabdi           ###   ########.fr       */
+/*   Updated: 2025/03/14 15:54:31 by muabdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@
 class Harl
 {
 private:
-    void debug(void);
-    void info(void);
-    void warning(void);
-    void error(void);
+    void _debug(void);
+    void _info(void);
+    void _warning(void);
+    void _error(void);
 
 public:
     Harl();

@@ -6,12 +6,13 @@
 /*   By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 15:00:56 by muabdi            #+#    #+#             */
-/*   Updated: 2025/02/24 15:03:14 by muabdi           ###   ########.fr       */
+/*   Updated: 2025/03/14 15:54:01 by muabdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/Harl.hpp"
 #include <iostream>
+#include <cstdlib>
 
 int main(void)
 {
