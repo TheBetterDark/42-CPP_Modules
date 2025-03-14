@@ -6,7 +6,7 @@
 /*   By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/02 17:57:26 by muabdi            #+#    #+#             */
-/*   Updated: 2025/03/14 16:04:09 by muabdi           ###   ########.fr       */
+/*   Updated: 2025/03/14 16:22:49 by muabdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,8 @@ int main(void)
 			continue;
 
 		std::stringstream ss(input);
-        int choice;
-        ss >> choice;
+		int choice;
+		ss >> choice;
 
 		switch (choice)
 		{

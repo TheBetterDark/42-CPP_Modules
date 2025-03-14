@@ -6,12 +6,13 @@
 /*   By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/25 13:52:43 by muabdi            #+#    #+#             */
-/*   Updated: 2025/02/26 15:54:30 by muabdi           ###   ########.fr       */
+/*   Updated: 2025/03/14 16:29:27 by muabdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/ClapTrap.hpp"
 #include <iostream>
+#include <cstdlib>
 
 int main(void)
 {

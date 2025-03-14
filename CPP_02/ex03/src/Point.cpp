@@ -6,15 +6,15 @@
 /*   By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 16:43:42 by muabdi            #+#    #+#             */
-/*   Updated: 2025/02/24 16:56:47 by muabdi           ###   ########.fr       */
+/*   Updated: 2025/03/14 16:26:51 by muabdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/Point.hpp"
 
-Point::Point(void) : x(0), y(0) {}
+Point::Point(void) : _x(0), _y(0) {}
 
-Point::Point(int const x, int const y) : x(x), y(y) {}
+Point::Point(int const _x, int const _y) : _x(_x), _y(_y) {}
 
 Point::Point(Point const &src)
 {
@@ -27,28 +27,28 @@ Point &Point::operator=(Point const &src)
 {
     if (this != &src)
     {
-        this->x = src.x;
-        this->y = src.y;
+        this->_x = src._x;
+        this->_y = src._y;
     }
     return *this;
 }
 
 int Point::getX(void) const
 {
-    return this->x;
+    return this->_x;
 }
 
 int Point::getY(void) const
 {
-    return this->y;
+    return this->_y;
 }
 
-void Point::setX(int const x)
+void Point::setX(int const _x)
 {
-    this->x = x;
+    this->_x = _x;
 }
 
-void Point::setY(int const y)
+void Point::setY(int const _y)
 {
-    this->y = y;
+    this->_y = _y;
 }

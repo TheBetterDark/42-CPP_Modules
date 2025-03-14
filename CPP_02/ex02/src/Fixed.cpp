@@ -6,23 +6,23 @@
 /*   By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 15:51:45 by muabdi            #+#    #+#             */
-/*   Updated: 2025/02/24 16:57:20 by muabdi           ###   ########.fr       */
+/*   Updated: 2025/03/14 16:24:50 by muabdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/Fixed.hpp"
 #include <cmath>
 
-Fixed::Fixed(void) : value(0) {}
+Fixed::Fixed(void) : _value(0) {}
 
 Fixed::Fixed(int const n)
 {
-    this->value = n << this->fractionalBits;
+    this->_value = n << this->_fractionalBits;
 }
 
 Fixed::Fixed(float const f)
 {
-    this->value = roundf(f * (1 << this->fractionalBits));
+    this->_value = roundf(f * (1 << this->_fractionalBits));
 }
 
 Fixed::Fixed(Fixed const &src)
@@ -37,38 +37,38 @@ Fixed::~Fixed(void)
 Fixed &Fixed::operator=(Fixed const &src)
 {
     if (this != &src)
-        this->value = src.getRawBits();
+        this->_value = src.getRawBits();
     return *this;
 }
 
 bool Fixed::operator>(Fixed const &right) const
 {
-    return this->value > right.getRawBits();
+    return this->_value > right.getRawBits();
 }
 
 bool Fixed::operator<(Fixed const &right) const
 {
-    return this->value < right.getRawBits();
+    return this->_value < right.getRawBits();
 }
 
 bool Fixed::operator>=(Fixed const &right) const
 {
-    return this->value >= right.getRawBits();
+    return this->_value >= right.getRawBits();
 }
 
 bool Fixed::operator<=(Fixed const &right) const
 {
-    return this->value <= right.getRawBits();
+    return this->_value <= right.getRawBits();
 }
 
 bool Fixed::operator==(Fixed const &right) const
 {
-    return this->value == right.getRawBits();
+    return this->_value == right.getRawBits();
 }
 
 bool Fixed::operator!=(Fixed const &right) const
 {
-    return this->value != right.getRawBits();
+    return this->_value != right.getRawBits();
 }
 
 Fixed Fixed::operator+(Fixed const &right) const
@@ -93,7 +93,7 @@ Fixed Fixed::operator/(Fixed const &right) const
 
 Fixed &Fixed::operator++(void)
 {
-    this->value++;
+    this->_value++;
     return *this;
 }
 
@@ -106,7 +106,7 @@ Fixed Fixed::operator++(int)
 
 Fixed &Fixed::operator--(void)
 {
-    this->value--;
+    this->_value--;
     return *this;
 }
 
@@ -119,22 +119,22 @@ Fixed Fixed::operator--(int)
 
 int Fixed::getRawBits(void) const
 {
-    return this->value;
+    return this->_value;
 }
 
 void Fixed::setRawBits(int const raw)
 {
-    this->value = raw;
+    this->_value = raw;
 }
 
 float Fixed::toFloat(void) const
 {
-    return (float)this->value / (1 << this->fractionalBits);
+    return (float)this->_value / (1 << this->_fractionalBits);
 }
 
 int Fixed::toInt(void) const
 {
-    return this->value >> this->fractionalBits;
+    return this->_value >> this->_fractionalBits;
 }
 
 Fixed &Fixed::min(Fixed &left, Fixed &right)

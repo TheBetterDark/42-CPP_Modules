@@ -6,7 +6,7 @@
 /*   By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 15:49:29 by muabdi            #+#    #+#             */
-/*   Updated: 2025/02/24 16:33:49 by muabdi           ###   ########.fr       */
+/*   Updated: 2025/03/14 16:22:56 by muabdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@
 class Fixed
 {
 private:
-    static const int fractionalBits = 8;
-    int value;
+    static const int _fractionalBits = 8;
+    int _value;
 
 public:
     Fixed(void);
@@ -45,8 +45,8 @@ public:
     Fixed operator/(Fixed const &right) const;
 
     Fixed &operator++(void);
-    Fixed operator++(int);
     Fixed &operator--(void);
+    Fixed operator++(int);
     Fixed operator--(int);
 
     int getRawBits(void) const;

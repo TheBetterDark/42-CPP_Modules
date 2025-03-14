@@ -6,12 +6,13 @@
 /*   By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 16:46:45 by muabdi            #+#    #+#             */
-/*   Updated: 2025/02/24 16:53:03 by muabdi           ###   ########.fr       */
+/*   Updated: 2025/03/14 16:26:26 by muabdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/Point.hpp"
 #include "../include/Fixed.hpp"
+#include <cstdlib>
 
 bool bsp(Point const a, Point const b, Point const c, Point const point)
 {

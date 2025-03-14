@@ -6,7 +6,7 @@
 /*   By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 16:43:54 by muabdi            #+#    #+#             */
-/*   Updated: 2025/02/24 16:49:26 by muabdi           ###   ########.fr       */
+/*   Updated: 2025/03/14 16:26:35 by muabdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@
 class Point
 {
 private:
-    int x;
-    int y;
+    int _x;
+    int _y;
 
 public:
     Point(void);
@@ -35,7 +35,5 @@ public:
     void setX(int const x);
     void setY(int const y);
 };
-
-
 
 #endif

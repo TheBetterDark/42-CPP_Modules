@@ -6,7 +6,7 @@
 /*   By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/10 17:03:39 by muabdi            #+#    #+#             */
-/*   Updated: 2025/03/14 16:11:15 by muabdi           ###   ########.fr       */
+/*   Updated: 2025/03/14 16:22:49 by muabdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void Contact::display_full_contact(void)
 {
 	std::cout << "\nfirst name: " << this->_first_name << "\n";
 	std::cout << "last name: " << this->_last_name << "\n";
-	std::cout << "nickname: "<< this->_nickname << "\n";
+	std::cout << "nickname: " << this->_nickname << "\n";
 	std::cout << "number: " << this->_number << "\n";
 	std::cout << "secret: " << this->_secret << std::endl;
 }

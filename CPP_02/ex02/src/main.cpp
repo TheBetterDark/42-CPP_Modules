@@ -6,11 +6,12 @@
 /*   By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 15:53:46 by muabdi            #+#    #+#             */
-/*   Updated: 2025/02/24 16:31:32 by muabdi           ###   ########.fr       */
+/*   Updated: 2025/03/14 16:25:00 by muabdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/Fixed.hpp"
+#include <cstdlib>
 
 int main(void)
 {
