@@ -6,7 +6,7 @@
 /*   By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 13:34:40 by muabdi            #+#    #+#             */
-/*   Updated: 2025/03/14 16:22:52 by muabdi           ###   ########.fr       */
+/*   Updated: 2025/03/19 16:46:31 by muabdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,7 @@ bool write_file(const std::string &filename, const std::string &fileContents)
     return true;
 }
 
+
 int main(int argc, char *argv[])
 {
     if (argc != 4)
@@ -72,6 +73,12 @@ int main(int argc, char *argv[])
     std::string stringToReplace = argv[2];
     std::string replacementString = argv[3];
     std::string fileContents;
+
+    if (stringToReplace.empty() || replacementString.empty())
+    {
+        std::cerr << "Error: string_to_replace or replacement_string cannot be empty" << std::endl;
+        return EXIT_FAILURE;
+    }
 
     if (!read_file(filename, fileContents))
         return EXIT_FAILURE;
