@@ -6,7 +6,7 @@
 /*   By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/25 13:56:41 by muabdi            #+#    #+#             */
-/*   Updated: 2025/03/18 15:09:49 by muabdi           ###   ########.fr       */
+/*   Updated: 2025/03/18 15:09:34 by muabdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 
 class ClapTrap
 {
-private:
+protected:
 	std::string name;
 	int hit_points;
 	int energy_points;
