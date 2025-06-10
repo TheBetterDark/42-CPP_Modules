@@ -6,7 +6,7 @@
 /*   By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/25 13:52:43 by muabdi            #+#    #+#             */
-/*   Updated: 2025/03/18 15:09:00 by muabdi           ###   ########.fr       */
+/*   Updated: 2025/06/10 12:27:55 by muabdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,18 +16,24 @@
 
 int main(void)
 {
-    ClapTrap a;
-    ClapTrap b("Somebody");
+    ClapTrap a("Person 1");
+    ClapTrap b("Person 2");
+    ClapTrap c;
+    ClapTrap d(c);
 
-    a.attack("some other person");
-    a.takeDamage(10);
-    a.takeDamage(10);
-    a.beRepaired(5);
-    a.attack("some other other person");
-    b.beRepaired(3);
+    a.attack("Person 2");
+    b.takeDamage(1);
+    b.attack("Person 1");
+    a.takeDamage(0);
+    b.beRepaired(1);
+    b.beRepaired(100);
+
     for (int i = 0; i < 12; i++)
-        b.attack("Somebody-else");
-    b.beRepaired(3);
+    {
+        c.attack("default");
+        d.takeDamage(1);
+        d.beRepaired(1);
+    }
 
     return EXIT_SUCCESS;
 }

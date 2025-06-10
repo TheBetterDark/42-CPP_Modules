@@ -6,11 +6,9 @@
 /*   By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/25 13:56:41 by muabdi            #+#    #+#             */
-/*   Updated: 2025/03/18 15:09:34 by muabdi           ###   ########.fr       */
+/*   Updated: 2025/06/10 13:55:35 by muabdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#pragma once
 
 #ifndef CLAPTRAP_HPP
 #define CLAPTRAP_HPP
@@ -29,11 +27,11 @@ public:
 	ClapTrap();
 	ClapTrap(std::string name);
 	ClapTrap(const ClapTrap &src);
-	~ClapTrap();
+	virtual ~ClapTrap();
 
 	ClapTrap &operator=(const ClapTrap &src);
 
-	void attack(const std::string &target);
+	virtual void attack(const std::string &target);
 	void takeDamage(unsigned int amount);
 	void beRepaired(unsigned int amount);
 };

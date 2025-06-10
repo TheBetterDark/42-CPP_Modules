@@ -6,11 +6,9 @@
 /*   By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/25 13:56:41 by muabdi            #+#    #+#             */
-/*   Updated: 2025/03/18 15:09:49 by muabdi           ###   ########.fr       */
+/*   Updated: 2025/06/10 12:11:52 by muabdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#pragma once
 
 #ifndef CLAPTRAP_HPP
 #define CLAPTRAP_HPP

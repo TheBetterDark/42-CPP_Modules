@@ -6,7 +6,7 @@
 /*   By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/17 18:57:31 by muabdi            #+#    #+#             */
-/*   Updated: 2025/03/18 15:02:48 by muabdi           ###   ########.fr       */
+/*   Updated: 2025/06/10 13:59:11 by muabdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ ScavTrap::ScavTrap(const ScavTrap &copy) : ClapTrap(copy)
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 {
     this->_guarding_gate = false;
-    std::cout << "ScavTrap" << this->name << " constructor has been called" << std::endl;
+    std::cout << "ScavTrap " << this->name << " constructor has been called" << std::endl;
 }
 
 ScavTrap::~ScavTrap()

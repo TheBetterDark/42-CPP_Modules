@@ -6,7 +6,7 @@
 /*   By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/25 14:09:04 by muabdi            #+#    #+#             */
-/*   Updated: 2025/03/18 15:06:32 by muabdi           ###   ########.fr       */
+/*   Updated: 2025/06/10 12:24:10 by muabdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,13 +38,15 @@ ClapTrap::~ClapTrap()
 ClapTrap &ClapTrap::operator=(const ClapTrap &src)
 {
 	std::cout << "ClapTrap assignation operator has been called" << std::endl;
+
 	if (this != &src)
-	{
-		this->name = src.name;
-		this->hit_points = src.hit_points;
-		this->energy_points = src.energy_points;
-		this->attack_damage = src.attack_damage;
-	}
+		return (*this);
+
+	this->name = src.name;
+	this->hit_points = src.hit_points;
+	this->energy_points = src.energy_points;
+	this->attack_damage = src.attack_damage;
+
 	return *this;
 }
 
@@ -78,16 +80,16 @@ void ClapTrap::takeDamage(unsigned int amount)
 
 void ClapTrap::beRepaired(unsigned int amount)
 {
-	if (this->hit_points == 0)
+	if (this->hit_points <= 0)
 	{
-		std::cout << "ClapTrap " << this->name << " is already dead!" << std::endl;
 		this->hit_points = 0;
+		std::cout << "ClapTrap " << this->name << " is already dead!" << std::endl;
 		return;
 	}
-	else if (this->hit_points == 10)
+	else if (this->hit_points >= 10)
 	{
-		std::cout << "ClapTrap " << this->name << " is already at full health!" << std::endl;
 		this->hit_points = 10;
+		std::cout << "ClapTrap " << this->name << " is already at full health!" << std::endl;
 		return;
 	}
 

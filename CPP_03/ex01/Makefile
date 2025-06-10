@@ -6,11 +6,11 @@
 #    By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/12 23:59:26 by muabdi            #+#    #+#              #
-#    Updated: 2025/03/14 16:22:46 by muabdi           ###   ########.fr        #
+#    Updated: 2025/06/10 13:57:09 by muabdi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = ClapTrap
+NAME = ScavTrap
 
 CXX = c++
 CXXFLAGS = -Wall -Werror -Wextra -std=c++98
@@ -23,7 +23,7 @@ NC = \033[0m
 SRC_DIR = ./src
 OBJ_DIR = ./bin
 
-SRCS = $(SRC_DIR)/main.cpp $(SRC_DIR)/ClapTrap.cpp
+SRCS = $(SRC_DIR)/main.cpp $(SRC_DIR)/ClapTrap.cpp $(SRC_DIR)/ScavTrap.cpp
 OBJS = $(SRCS:$(SRC_DIR)/%.cPP=$(OBJ_DIR)/%.o)
 
 all: $(NAME) $(OBJ_DIR)
