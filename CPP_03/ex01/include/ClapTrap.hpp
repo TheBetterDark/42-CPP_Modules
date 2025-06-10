@@ -6,7 +6,7 @@
 /*   By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/25 13:56:41 by muabdi            #+#    #+#             */
-/*   Updated: 2025/06/10 13:55:35 by muabdi           ###   ########.fr       */
+/*   Updated: 2025/06/10 14:01:44 by muabdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,11 @@ public:
 	ClapTrap();
 	ClapTrap(std::string name);
 	ClapTrap(const ClapTrap &src);
-	virtual ~ClapTrap();
+	~ClapTrap();
 
 	ClapTrap &operator=(const ClapTrap &src);
 
-	virtual void attack(const std::string &target);
+	void attack(const std::string &target);
 	void takeDamage(unsigned int amount);
 	void beRepaired(unsigned int amount);
 };
