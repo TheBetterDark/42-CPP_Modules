@@ -6,7 +6,7 @@
 /*   By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/25 14:09:04 by muabdi            #+#    #+#             */
-/*   Updated: 2025/03/17 19:00:40 by muabdi           ###   ########.fr       */
+/*   Updated: 2025/04/01 16:58:50 by muabdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,13 +96,4 @@ void ClapTrap::beRepaired(unsigned int amount)
 	std::min(this->energy_points, 0);
 
 	std::cout << "ClapTrap " << this->name << " repaired " << amount << " points of damage!" << std::endl;
-}
-
-void ClapTrap::displayStatus(void) const
-{
-	std::cout << "ClapTrap " << this->name << " stats:" << "\n";
-	std::cout << "Hit points: " << this->hit_points << "\n";
-	std::cout << "Energy points: " << this->energy_points << "\n";
-	std::cout << "Attack damage: " << this->attack_damage << "\n"
-			  << std::endl;
 }
