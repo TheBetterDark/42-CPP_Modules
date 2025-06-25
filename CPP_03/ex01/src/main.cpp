@@ -6,7 +6,7 @@
 /*   By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/25 13:52:43 by muabdi            #+#    #+#             */
-/*   Updated: 2025/06/10 13:56:06 by muabdi           ###   ########.fr       */
+/*   Updated: 2025/06/25 19:54:42 by muabdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,8 @@ int main(void)
 
         std::cout << "\033[34mTesting\033[0m" << std::endl;
         scavA.attack("TargetA");
-        // for (int i = 0; i < 50; i++)
-        // 	scavA.attack("TargetA");
+        for (int i = 0; i < 50; i++)
+        	scavA.attack("TargetA");
         scavA.beRepaired(22);
         scavA.takeDamage(21);
         scavA.beRepaired(22);
