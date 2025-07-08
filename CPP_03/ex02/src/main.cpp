@@ -6,7 +6,7 @@
 /*   By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/25 13:52:43 by muabdi            #+#    #+#             */
-/*   Updated: 2025/06/25 19:54:35 by muabdi           ###   ########.fr       */
+/*   Updated: 2025/07/08 21:09:38 by muabdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,21 @@ int main(void)
 
     std::cout << "\nTesting FragTrap class" << std::endl;
     {
+        FragTrap fragA;
+        FragTrap fragB("Fraggy");
+
+        std::cout << "\033[35mTesting\033[0m" << std::endl;
+        fragA.attack("TargetA");
+        for (int i = 0; i < 50; i++)
+            fragA.attack("TargetA");
+        fragA.beRepaired(22);
+        fragA.takeDamage(21);
+        fragA.beRepaired(22);
+        fragA.highFivesGuys();
+        fragB.attack("TargetB");
+        fragB.takeDamage(101);
+        fragB.takeDamage(15);
+        fragB.attack("TargetC");
     }
 
     return EXIT_SUCCESS;

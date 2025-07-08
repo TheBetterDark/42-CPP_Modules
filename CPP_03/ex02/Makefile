@@ -6,7 +6,7 @@
 #    By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/12 23:59:26 by muabdi            #+#    #+#              #
-#    Updated: 2025/06/10 14:02:52 by muabdi           ###   ########.fr        #
+#    Updated: 2025/07/08 21:14:04 by muabdi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,7 @@ NC = \033[0m
 SRC_DIR = ./src
 OBJ_DIR = ./bin
 
-SRCS = $(SRC_DIR)/main.cpp $(SRC_DIR)/ClapTrap.cpp $(SRC_DIR)/FragTrap.cpp
+SRCS = $(SRC_DIR)/main.cpp $(SRC_DIR)/ClapTrap.cpp $(SRC_DIR)/FragTrap.cpp $(SRC_DIR)/ClapTrap.cpp
 OBJS = $(SRCS:$(SRC_DIR)/%.cPP=$(OBJ_DIR)/%.o)
 
 all: $(NAME) $(OBJ_DIR)
