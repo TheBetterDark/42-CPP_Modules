@@ -24,11 +24,6 @@ WrongAnimal::WrongAnimal(const WrongAnimal &src)
 	std::cout << "WrongAnimal copy constructor has been called" << std::endl;
 }
 
-WrongAnimal::WrongAnimal(std::string type) : type(type)
-{
-	std::cout << "WrongAnimal " << this->type << " constructor has been called" << std::endl;
-}
-
 WrongAnimal::~WrongAnimal()
 {
 	std::cout << "WrongAnimal destructor has been called" << std::endl;

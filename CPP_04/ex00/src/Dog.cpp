@@ -6,7 +6,7 @@
 /*   By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/11 17:46:09 by muabdi            #+#    #+#             */
-/*   Updated: 2025/09/11 18:41:52 by muabdi           ###   ########.fr       */
+/*   Updated: 2025/09/11 19:12:14 by muabdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,6 @@ Dog::Dog(const Dog &src)
 {
 	*this = src;
 	std::cout << "Dog copy constructor has been called" << std::endl;
-}
-
-Dog::Dog(std::string type) : Animal(type)
-{
-	std::cout << "Dog " << this->type << " constructor has been called" << std::endl;
 }
 
 Dog::~Dog()

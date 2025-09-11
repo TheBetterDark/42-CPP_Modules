@@ -25,11 +25,6 @@ WrongCat::WrongCat(const WrongCat &src)
 	std::cout << "WrongCat copy constructor has been called" << std::endl;
 }
 
-WrongCat::WrongCat(std::string type) : WrongAnimal(type)
-{
-	std::cout << "WrongCat " << this->type << " constructor has been called" << std::endl;
-}
-
 WrongCat::~WrongCat()
 {
 	std::cout << "WrongCat destructor has been called" << std::endl;
