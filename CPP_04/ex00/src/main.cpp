@@ -6,7 +6,7 @@
 /*   By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/11 17:47:07 by muabdi            #+#    #+#             */
-/*   Updated: 2025/09/11 18:57:30 by muabdi           ###   ########.fr       */
+/*   Updated: 2026/01/08 17:03:23 by muabdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int main(void)
     std::cout << "             TESTING DOG CLASS           " << std::endl;
 
 
-    const Animal *dog = new Dog();
+    const Dog *dog = new Dog();
     std::cout << dog->getType() << " " << std::endl;
     dog->makeSound(); // will output the dog sound!
     delete dog;
@@ -40,7 +40,7 @@ int main(void)
     std::cout << "             TESTING CAT CLASS           " << std::endl;
 
 
-    const Animal *cat = new Cat();
+    const Cat *cat = new Cat();
     std::cout << cat->getType() << " " << std::endl;
     cat->makeSound(); // will output the cat sound!
     delete cat;

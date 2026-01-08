@@ -6,13 +6,14 @@
 /*   By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/11 17:47:07 by muabdi            #+#    #+#             */
-/*   Updated: 2025/09/11 18:57:30 by muabdi           ###   ########.fr       */
+/*   Updated: 2026/01/08 18:15:53 by muabdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/WrongAnimal.hpp"
 #include "../include/WrongCat.hpp"
 #include "../include/Animal.hpp"
+#include "../include/Brain.hpp"
 #include "../include/Dog.hpp"
 #include "../include/Cat.hpp"
 #include <iostream>
@@ -31,18 +32,24 @@ int main(void)
     std::cout << "             TESTING DOG CLASS           " << std::endl;
 
 
-    const Animal *dog = new Dog();
+    const Dog *dog = new Dog();
     std::cout << dog->getType() << " " << std::endl;
     dog->makeSound(); // will output the dog sound!
+    Brain& dogBrain = dog->getBrain();
+    dogBrain.setIdea("I am a dog", 0);
+    std::cout << dogBrain.getIdea(0) << std::endl;
     delete dog;
 
     std::cout << "-----------------------------------------" << std::endl;
     std::cout << "             TESTING CAT CLASS           " << std::endl;
 
 
-    const Animal *cat = new Cat();
+    const Cat *cat = new Cat();
     std::cout << cat->getType() << " " << std::endl;
     cat->makeSound(); // will output the cat sound!
+    Brain& catBrain = cat->getBrain();
+    catBrain.setIdea("I am a dog", 0);
+    std::cout << catBrain.getIdea(0) << std::endl;
     delete cat;
 
     std::cout << "-----------------------------------------" << std::endl;

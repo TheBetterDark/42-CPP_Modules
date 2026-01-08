@@ -6,7 +6,7 @@
 /*   By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/11 19:01:03 by muabdi            #+#    #+#             */
-/*   Updated: 2025/09/11 19:33:35 by muabdi           ###   ########.fr       */
+/*   Updated: 2026/01/08 16:37:47 by muabdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@ public:
 	Brain(const Brain &src);
 	Brain &operator=(const Brain &src);
 
-    std::string*    getIdea(int index);
-    void            setIdea(std::string idea);
+    std::string    getIdea(int index);
+    void           setIdea(std::string idea, int index);
 };
 
 

@@ -6,7 +6,7 @@
 /*   By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/11 17:45:58 by muabdi            #+#    #+#             */
-/*   Updated: 2025/09/11 19:12:05 by muabdi           ###   ########.fr       */
+/*   Updated: 2026/01/08 16:52:44 by muabdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ Cat::Cat() : Animal()
 	std::cout << "Cat default constructor has been called" << std::endl;
 }
 
-Cat::Cat(const Cat &src)
+Cat::Cat(const Cat &src): Animal(src)
 {
 	*this = src;
 	std::cout << "Cat copy constructor has been called" << std::endl;

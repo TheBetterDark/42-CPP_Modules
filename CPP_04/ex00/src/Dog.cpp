@@ -6,7 +6,7 @@
 /*   By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/11 17:46:09 by muabdi            #+#    #+#             */
-/*   Updated: 2025/09/11 19:12:14 by muabdi           ###   ########.fr       */
+/*   Updated: 2026/01/08 16:52:27 by muabdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ Dog::Dog() : Animal()
 	std::cout << "Dog default constructor has been called" << std::endl;
 }
 
-Dog::Dog(const Dog &src)
+Dog::Dog(const Dog &src): Animal(src)
 {
 	*this = src;
 	std::cout << "Dog copy constructor has been called" << std::endl;

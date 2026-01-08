@@ -6,7 +6,7 @@
 #    By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/12 23:59:26 by muabdi            #+#    #+#              #
-#    Updated: 2025/09/11 18:59:28 by muabdi           ###   ########.fr        #
+#    Updated: 2026/01/08 18:10:57 by muabdi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,7 @@ SRC_DIR = ./src
 OBJ_DIR = ./bin
 
 SRCS = $(SRC_DIR)/main.cpp $(SRC_DIR)/Animal.cpp $(SRC_DIR)/Dog.cpp $(SRC_DIR)/Cat.cpp \
-$(SRC_DIR)/WrongAnimal.cpp $(SRC_DIR)/WrongCat.cpp
+$(SRC_DIR)/WrongAnimal.cpp $(SRC_DIR)/WrongCat.cpp $(SRC_DIR)/Brain.cpp
 OBJS = $(SRCS:$(SRC_DIR)/%.cPP=$(OBJ_DIR)/%.o)
 
 all: $(NAME) $(OBJ_DIR)
