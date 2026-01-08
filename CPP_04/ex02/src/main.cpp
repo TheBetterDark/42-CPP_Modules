@@ -6,7 +6,7 @@
 /*   By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/11 17:47:07 by muabdi            #+#    #+#             */
-/*   Updated: 2026/01/08 18:15:53 by muabdi           ###   ########.fr       */
+/*   Updated: 2026/01/08 20:28:52 by muabdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 
 int main(void)
 {
+    /*
     std::cout << "-----------------------------------------" << std::endl;
     std::cout << "            TESTING ANIMAL CLASS         " << std::endl;
 
@@ -27,6 +28,7 @@ int main(void)
     std::cout << meta->getType() << " " << std::endl;
     meta->makeSound(); // will output the animal default sound!
     delete meta;
+    */
 
     std::cout << "-----------------------------------------" << std::endl;
     std::cout << "             TESTING DOG CLASS           " << std::endl;

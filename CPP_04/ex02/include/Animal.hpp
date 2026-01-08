@@ -6,7 +6,7 @@
 /*   By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/11 17:05:04 by muabdi            #+#    #+#             */
-/*   Updated: 2026/01/08 20:28:04 by muabdi           ###   ########.fr       */
+/*   Updated: 2026/01/08 20:29:03 by muabdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ protected:
     
     Animal &operator=(const Animal &src);
 
-    virtual std::string getType();
+    virtual std::string getType() const;
     virtual void makeSound() const = 0;
 };
 
