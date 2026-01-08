@@ -6,7 +6,7 @@
 /*   By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/11 17:47:07 by muabdi            #+#    #+#             */
-/*   Updated: 2026/01/08 20:28:52 by muabdi           ###   ########.fr       */
+/*   Updated: 2026/01/08 20:29:55 by muabdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ int main(void)
     std::cout << cat->getType() << " " << std::endl;
     cat->makeSound(); // will output the cat sound!
     Brain& catBrain = cat->getBrain();
-    catBrain.setIdea("I am a dog", 0);
+    catBrain.setIdea("I am a cat", 0);
     std::cout << catBrain.getIdea(0) << std::endl;
     delete cat;
 
